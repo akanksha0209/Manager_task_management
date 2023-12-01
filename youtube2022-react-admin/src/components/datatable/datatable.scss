@@ -1,0 +1,142 @@
+// .datatable {
+//   height: 600px;
+//   padding: 20px;
+  
+//   .datatableTitle{
+//     width: 100%;
+//     font-size: 24px;
+//     color: gray;
+//     margin-bottom: 10px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     .link{
+//       text-decoration: none;
+//       color: green;
+//       font-size: 16px;
+//       font-weight: 400;
+//       border: 1px solid green;
+//       padding: 5px;
+//       border-radius: 5px;
+//       cursor: pointer;
+//     }
+//   }
+
+//   .cellWithImg {
+//     display: flex;
+//     align-items: center;
+
+//     .cellImg {
+//       width: 32px;
+//       height: 32px;
+//       border-radius: 50%;
+//       object-fit: cover;
+//       margin-right: 20px;
+//     }
+//   }
+
+//   .cellWithStatus {
+//     padding: 5px;
+//     border-radius: 5px;
+
+//     &.active {
+//       background-color: rgba(0, 128, 0, 0.05);
+//       color: green;
+//     }
+//     &.pending {
+//       background-color: rgba(255, 217, 0, 0.05);
+//       color: goldenrod;
+//     }
+//     &.passive {
+//       background-color: rgba(255, 0, 0, 0.05);
+//       color: crimson;
+//     }
+//   }
+
+//   .cellAction {
+//     display: flex;
+//     align-items: center;
+//     gap: 15px;
+
+//     .viewButton {
+//       padding: 2px 5px;
+//       border-radius: 5px;
+//       color: darkblue;
+//       border: 1px dotted rgba(0, 0, 139, 0.596);
+//       cursor: pointer;
+//     }
+    
+//     .deleteButton {
+//       padding: 2px 5px;
+//       border-radius: 5px;
+//       color: crimson;
+//       border: 1px dotted rgba(220, 20, 60, 0.6);
+//       cursor: pointer;
+//     }
+//   }
+// }
+
+
+// YourContainerComponent.scss
+
+// Assuming you have a container component around your table
+.your-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; // Adjust the height as needed
+  background-color: #6f42c1; // Purple background color
+}
+
+// YourTableComponent.scss
+
+// Assuming this is the SCSS for your table component
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; // Adjust margin as needed
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #fff; // White border
+  }
+
+  th {
+    background-color: #6f42c1; // Purple header background color
+    color: #fff; // White header text color
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9; // Light gray background for even rows
+  }
+
+  tbody tr:hover {
+    background-color: #ddd; // Lighter gray background on hover
+  }
+
+  td > div {
+    display: flex;
+    justify-content: space-around;
+
+    .viewButton,
+    .deleteButton {
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #555; // Darker background on hover
+        color: #fff; // White text color on hover
+      }
+    }
+
+    .deleteButton {
+      background-color: #d9534f; // Bootstrap's danger color for delete button
+    }
+  }
+}
