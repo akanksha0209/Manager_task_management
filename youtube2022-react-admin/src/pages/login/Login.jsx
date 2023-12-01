@@ -218,9 +218,9 @@ function Login() {
     }
 
     const redirectUser = () => {
-      if (user && user.email === 'akankshaapai@gmail.com') {
+      if (user && user.email === 'akankshaapai.cs20@rvce.edu.in') {
         navigate('/'); // Adjust the route for the manager dashboard
-      } else if (user && user.email === 'akankshaapai@gmail.com') {
+      } else if (user && user.email === 'akankshaapai.cs20@rvce.edu.in') {
         navigate('/'); // Adjust the route for the employee dashboard
       } else if (user) {
         navigate('/login');
